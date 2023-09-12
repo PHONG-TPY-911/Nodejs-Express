@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+</head>
+<body>
+  <input type="text" id="noTextEntry" placeholder="Type or Ctrl+C/Ctrl+V here">
+
+  <script>
+    $(document).ready(function() {
+      $('#noTextEntry').on('keydown', function(e) {
+        // Prevent typing text by checking for non-Ctrl key presses
+        if (!e.ctrlKey) {
+          e.preventDefault();
+        }
+      });
+    });
+  </script>
+</body>
+</html>
